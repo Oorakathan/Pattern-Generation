@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern printing</title>
+  </head>
+  <body>
+    <h1>'*' Up Right Pattern Generation</h1>
+    Enter the n value:
+    <input type="number" placeholder="Eg:3" id="input1" /><br />
+    <button onclick="generator1()">Ok</button>
+    <br /><span id="result1"></span>
+
+    <h1>N number skiping Pattern</h1>
+    <input type="number" id="input2" placeholder="Enter a number..." />
+    <br /><button onclick="generator2()">Submit</button> <br /><span
+      id="result2"
+    ></span>
+
+    <h1>Increasing Number Up Right Triangle Pattern (Question 1 in Lab)</h1>
+    <input type="number" id="input3" /><br />
+    <button onclick="generator3()">Ok</button><br />
+    <span id="result3"></span>
+
+    <h1>Decreasing Number Up Right Triangle Pattern (Question 2 in Lab)</h1>
+    <input type="number" id="input4" /><br />
+    <button onclick="generator4()">Ok</button><br />
+    <span id="result4"></span>
+
+    <h1>
+      Decreasing Reverse Number Up Right Triangle Pattern (Question 3 in Lab)
+    </h1>
+    <input type="number" id="input5" /><br />
+    <button onclick="generator5()">Ok</button><br />
+    <span id="result5"></span>
+
+    <h1>
+      Increasing Reverse Number Up Right Triangle Pattern (Question 4 in Lab)
+    </h1>
+    <input type="number" id="input6" /><br />
+    <button onclick="generator6()">Ok</button><br />
+    <span id="result6"></span>
+
+    <h1>Decreasing Number Down Right Triangle Pattern (Question 5 in Lab)</h1>
+    <input type="number" id="input7" /><br />
+    <button onclick="generator7()">Ok</button><br />
+    <span id="result7"></span>
+
+    <h1>Increasing Number Down Right Triangle Pattern (Question 6 in Lab)</h1>
+    <input type="number" id="input8" /><br />
+    <button onclick="generator8()">Ok</button><br />
+    <span id="result8"></span>
+
+    <h1>
+      Decreasing Reverse Number Down Right Triangle Pattern (Question 7 in Lab)
+    </h1>
+    <input type="number" id="input9" /><br />
+    <button onclick="generator9()">Ok</button><br />
+    <span id="result9"></span>
+
+    <h1>
+      Increasing Reverse Number Down Right Triangle Pattern (Question 8 in Lab)
+    </h1>
+    <input type="number" id="input10" /><br />
+    <button onclick="generator10()">Ok</button><br />
+    <span id="result10"></span>
+
+    <h1>Own Quesion 1</h1>
+    <input type="number" id="input11" /><br />
+    <button onclick="generator11()">Ok</button><br />
+    <span id="result11"></span>
+
+    <h1></h1>
+  </body>
+
+  <script>
+    function generator1() {
+      let n = parseInt(document.getElementById("input1").value);
+      let res = "";
+      for (let i = 1; i <= n; i++ /*row*/) {
+        for (let j = 1; j <= i; j++ /*column*/) {
+          res += "*";
+        }
+        res += "<br>";
+      }
+      document.getElementById("result1").innerHTML = res;
+    }
+
+    function generator2() {
+      let num = parseInt(document.getElementById("input2").value);
+      let output = "";
+
+      for (let i = 1; i <= num; i++) {
+        let current = i;
+        for (let j = num; j >= i; j--) {
+          output += current + " ";
+          current += j;
+        }
+        output += "<br>";
+      }
+
+      document.getElementById("result2").innerHTML = output;
+    }
+
+    function generator3() {
+      let n = parseInt(document.getElementById("input3").value);
+      let res = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result3").innerHTML = res;
+    }
+
+    function generator4() {
+      let n = parseInt(document.getElementById("input4").value);
+      let res = "";
+      for (let i = n; i >= 1; i--) {
+        for (let j = 5; j >= i; j--) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result4").innerHTML = res;
+    }
+
+    function generator5() {
+      let n = parseInt(document.getElementById("input5").value);
+      let res = "";
+      for (let i = n; i >= 1; i--) {
+        for (let j = i; j <= n; j++) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result5").innerHTML = res;
+    }
+
+    function generator6() {
+      let n = parseInt(document.getElementById("input6").value);
+      let res = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = i; j >= 1; j--) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result6").innerHTML = res;
+    }
+
+    function generator7() {
+      let n = parseInt(document.getElementById("input7").value);
+      let res = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = n; j >= i; j--) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result7").innerHTML = res;
+    }
+
+    function generator8() {
+      let n = parseInt(document.getElementById("input8").value);
+      let res = "";
+      for (let i = n; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result8").innerHTML = res;
+    }
+
+    function generator9() {
+      let n = parseInt(document.getElementById("input9").value);
+      let res = "";
+      for (let i = n; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result9").innerHTML = res;
+    }
+
+    function generator10() {
+      let n = parseInt(document.getElementById("input10").value);
+      let res = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = i; j <= n; j++) {
+          res += j;
+        }
+        res += "<br>";
+      }
+      document.getElementById("result10").innerHTML = res;
+    }
+
+    function generator11() {
+      let n = parseInt(document.getElementById("input11").value);
+      let res = "";
+      for (let i = n; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+          if (j != 1) {
+            res += j;
+            res += j;
+          } else {
+            res += j;
+          }
+        }
+        res += "<br>";
+      }
+      document.getElementById("result11").innerHTML = res;
+    }
+  </script>
+</html>
